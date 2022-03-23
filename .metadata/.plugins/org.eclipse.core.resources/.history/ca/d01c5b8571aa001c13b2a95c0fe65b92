@@ -1,0 +1,8 @@
+package com.youn.vo;
+
+public class Employee {
+	private Integer empno;
+	private String ename;
+	private Integer deptno;
+
+}

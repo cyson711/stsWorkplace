@@ -1,0 +1,5 @@
+package com.youn.dao;
+
+public interface EmployeeDao {
+
+}
