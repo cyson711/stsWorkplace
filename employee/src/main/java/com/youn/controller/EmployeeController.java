@@ -19,18 +19,6 @@ public class EmployeeController {
 	@Autowired
 	EmployeeDao empDao;
 	
-	/*
-	@RequestMapping(value = "/home")
-	public String home() {
-		return "index.html";
-	}*/
-	/*
-	@RequestMapping(value = "/search", method = RequestMethod.GET)
-	public List<Employee> list(@RequestParam(value = "deptno", required = false) String deptno) {
-		Integer deptnoint = Integer.parseInt(deptno);
-		return empDao.employeeList(deptnoint);
-	}*/
-	
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public List<Employee> list(@RequestParam(value = "deptno", required = false) Integer deptno) {
 		//Integer deptnoint = Integer.parseInt(deptno);
