@@ -1,0 +1,12 @@
+# datasource
+spring.datasource.url=jdbc:oracle:thin:@db202203221657_high?TNS_ADMIN=./src/main/resources/Wallet_DB202203221657
+spring.datasource.username=admin
+spring.datasource.password=Educationdb1
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+ 
+# vo location
+mybatis.type-aliases-package=com.youn.vo
+ 
+# xml location
+mybatis.mapper-locations=classpath:mappers/*.xml
+
