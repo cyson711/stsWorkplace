@@ -7,13 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.youn.dao.EmployeeDao;
 import com.youn.vo.Employee;
 
 @RestController
-
 public class EmployeeController {
 	
 	@Autowired
@@ -28,8 +28,9 @@ public class EmployeeController {
 	
 	
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
-	public List<Employee> list() {
-		return empDao.employeeList();
+	public List<Employee> list(@RequestParam(value = "deptno", required = false) String deptno) {
+		Integer deptnoint = Integer.parseInt(deptno);
+		return empDao.employeeList(deptnoint);
 	}
 
 }

@@ -9,5 +9,6 @@
     	ENAME,
     	DEPTNO
     FROM EMP
+   	WHERE DEPTNO = #{DEPTNO}
   </select>
 </mapper>

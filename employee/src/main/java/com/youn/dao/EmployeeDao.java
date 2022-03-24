@@ -7,6 +7,6 @@ import java.util.List;
 @Mapper
 public interface EmployeeDao {
 	
-	List<Employee> employeeList();
+	List<Employee> employeeList(Integer deptno);
 
 }
